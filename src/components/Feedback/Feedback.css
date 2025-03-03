@@ -1,0 +1,43 @@
+/* src/pages/Feedback/Feedback.css */
+body {
+    background-image: url('/src/img/fundo3.png');
+    background-size: cover;
+    background-color: #A64182;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-content {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .comment {
+    background-color: #A64182;
+    color: #FFF;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .comment p {
+    margin: 5px 0;
+  }
+  
+  .actions button {
+    background-color: #5DA649;
+    color: #FFF;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+  }
+  
+  .actions button:hover {
+    background-color: #A3BF3B;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+  }
+  

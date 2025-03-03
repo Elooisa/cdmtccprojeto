@@ -1,0 +1,54 @@
+/* src/pages/Cardapio/Cardapio.css */
+body {
+    background-image: url('/src/img/fundo3.png');
+    background-size: cover;
+    background-color: #A64182;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-content {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+  }
+  
+  button {
+    background-color: #5DA649;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #A3BF3B;
+  }
+  
+  .menu-item {
+    background-color: #A64182;
+    color: #FFF;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .menu-item h3 {
+    margin: 0;
+  }
+  
+  .menu-item p {
+    margin: 5px 0;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+  }
+  

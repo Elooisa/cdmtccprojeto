@@ -1,0 +1,31 @@
+/* src/shared/styles/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #732457;
+  color: #FFF;
+  padding: 10px 20px;
+  width: 100%; /* O header ocupa toda a largura da viewport */
+  position: fixed; /* Fixa o header no topo da página */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que o header fique acima de outros elementos */
+  box-sizing: border-box;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header nav li {
+    margin-left: 20px;
+  }
+  
