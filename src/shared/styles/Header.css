@@ -3,29 +3,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #732457;
-  color: #FFF;
+  background-color: #5DA649; /* Verde */
   padding: 10px 20px;
-  width: 100%; /* O header ocupa toda a largura da viewport */
-  position: fixed; /* Fixa o header no topo da página */
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Garante que o header fique acima de outros elementos */
+  width: 100%;
   box-sizing: border-box;
-  }
-  
-  .header h1 {
-    margin: 0;
-  }
-  
-  .header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header nav li {
-    margin-left: 20px;
-  }
-  
+  height: 60px; /* Altura fixa */
+  position: fixed; /* Fixa o header no topo */
+  top: 0; /* Garante que ele está no topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Faz o header ocupar toda a largura */
+  z-index: 1000;
+}
+
+.logo-header {
+  width: 250px; /* Defina a largura desejada */
+  height: auto;
+}
+
+.logo-home {
+  width: 600px; /* Defina a largura desejada */
+  height: auto;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav li {
+  margin-left: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+}

@@ -5,14 +5,14 @@ import './styles/Header.css';
 
 const Header = () => (
   <header className="header">
-    <h1>CDM</h1>
+    <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo-header" />
     <nav>
       <ul>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/login">Entrar</Link>
         </li>
         <li>
-          <Link to="/register">Criar Conta</Link>
+          <Link to="/register">Cadastrar</Link>
         </li>
       </ul>
     </nav>
@@ -20,3 +20,4 @@ const Header = () => (
 );
 
 export default Header;
+

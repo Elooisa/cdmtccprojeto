@@ -1,48 +1,41 @@
 // src/pages/Login/Login.jsx
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import '../../shared/styles/Header.css';
-import './Login.css';
-import Header from '../../shared/Header';
+import React from 'react';
+import './Login.css'; // Importação do CSS
+import Header from '../../shared/Header'; // Importação do Header compartilhado
 
-
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    // Autenticação de exemplo
-    if (email === 'user@example.com' && password === 'password') {
-      navigate('/dashboard');
-    } else {
-      alert('Credenciais inválidas');
-    }
-  };
-
-  return (
-    <div className="login">
-      <Header />
-      <main className="main-content">
-        <h1>Login</h1>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleLogin}>Continuar</button>
-        <Link to="/forgot-password">Esqueci a senha</Link>
-      </main>
-      <Header />
-    </div>
-  );
-};
+const Login = () => (
+  <div className="login-page">
+    <header className="header">
+      <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo" />
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Voltar</a> {/* Botão "Voltar" */}
+          </li>
+          <li>
+            <a href="/login">Entrar</a>
+          </li>
+          <li>
+            <a href="/register">Criar Conta</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main className="login-content">
+      <img src="src/img/logofieb.png" alt="Logo FIEB" className="login-logo" />
+      <div className="login-box">
+        <form className="login-form">
+          <input type="email" placeholder="Email..." className="login-input" />
+          <input type="password" placeholder="Senha..." className="login-input" />
+          <button type="submit" className="login-button">Entrar</button>
+        </form>
+        <div className="login-links">
+          <a href="/forgot-password">Esqueceu a senha?</a>
+          <a href="/register">Não tem uma conta? Cadastre-se</a>
+        </div>
+      </div>
+    </main>
+  </div>
+);
 
 export default Login;
