@@ -1,34 +1,71 @@
-/* src/pages/Dashboard/Dashboard.css */
-body {
-    background-image: url('/src/img/fundo2.png');
-    background-size: cover;
-    background-color: #A64182;
-    font-family: Arial, sans-serif;
-  }
-  
-  .main-content {
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  .grid-item {
-    background-color: #732457;
-    color: #FFF;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-  }
-  
-  .grid-item:hover {
-    background-color: #A64182;
-  }
-  
+/* Página do Dashboard */
+.dashboard-page {
+  min-height: 100vh; /* Garante que a página ocupe a altura total */
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-menu {
+  list-style: none; /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Alinha os itens horizontalmente */
+  gap: 20px; /* Adiciona espaço entre os botões */
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: center; /* Alinha os botões verticalmente */
+}
+
+.dashboard-menu li a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #FFF; /* Cor do texto */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease;
+  background-color: #5DA649; /* Cor de fundo do botão */
+}
+
+.dashboard-menu li a:hover {
+  background-color: #A3BF3B; /* Cor ao passar o mouse */
+}
+
+
+/* Botão Sair */
+.logout a {
+  background-color: #A64182; /* Fundo vermelho */
+}
+
+.logout a:hover {
+  background-color: #732457; /* Vermelho mais escuro no hover */
+}
+
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav li {
+  margin-left: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px 15px; /* Espaçamento interno dos botões */
+  background-color: #5DA649; /* Cor de fundo verde */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.header nav a:hover {
+  background-color: #A3BF3B; /* Cor ao passar o mouse */
+}

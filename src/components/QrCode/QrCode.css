@@ -1,42 +1,163 @@
-/* src/pages/QrCode/QrCode.css */
-body {
-    background-image: url('/src/img/fundo2.png');
-    background-size: cover;
-    background-color: #A64182;
-    font-family: Arial, sans-serif;
-  }
-  
-  .main-content {
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  input, select {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 80%;
-  }
-  
-  button {
-    background-color: #5DA649;
-    color: #FFF;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: #A3BF3B;
-  }
-  
-  .qr-container {
-    margin-top: 20px;
-  }
-  
-  .back-button {
-    margin-top: 20px;
-  }
-  
+/* Estilo Geral da Página */
+.qrcode-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFF; /* Texto branco */
+}
+
+/* Cabeçalho */
+.qrcode-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.qrcode-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.qrcode-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Conteúdo Principal */
+.qrcode-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; /* Espaço entre as seções */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Adapta para telas menores */
+}
+
+/* Seções */
+.qrcode-section {
+  background-color: #FFF; /* Fundo branco */
+  color: #000; /* Texto preto */
+  padding: 20px;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 350px; /* Largura fixa */
+  height: 500px; /* Altura suficiente para todos os elementos */
+  display: flex;
+  flex-direction: column; /* Organização vertical */
+  gap: 15px; /* Espaçamento entre os elementos */
+  box-sizing: border-box; /* Inclui padding no tamanho total */
+}
+
+.qrcode-section h2 {
+  font-size: 20px;
+  color: #5DA649; /* Verde escuro */
+  margin-bottom: 10px;
+}
+
+.qrcode-form {
+  display: flex;
+  flex-direction: column; /* Elementos organizados verticalmente */
+  justify-content: flex-start; /* Alinha os elementos ao topo */
+  align-items: stretch; /* Garante que os elementos ocupem a largura total */
+  height: 100%; /* Preenche toda a altura da caixa */
+  gap: 15px; /* Espaçamento consistente entre os elementos */
+  box-sizing: border-box; /* Inclui padding e bordas dentro do tamanho da caixa */
+}
+
+.qrcode-form .button-wrapper {
+  display: flex; /* Ativa o Flexbox para a área do botão */
+  justify-content: center; /* Centraliza o botão horizontalmente */
+}
+
+
+/* Formulários */
+.qrcode-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.qrcode-form input,
+.qrcode-form textarea {
+  width: 100%; /* Ocupa toda a largura disponível */
+  padding: 10px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  border: 1px solid #CCC; /* Borda cinza */
+  border-radius: 10px; /* Cantos arredondados */
+  box-sizing: border-box; /* Garante que a borda esteja dentro do quadrado */
+  outline: none; /* Remove a borda azul padrão ao focar */
+  transition: border-color 0.3s ease; /* Suaviza a alteração de cor na borda */
+}
+
+/* Efeito ao focar no campo */
+.qrcode-form input:focus,
+.qrcode-form textarea:focus {
+  border-color: #5DA649; /* Borda verde ao focar */
+}
+
+.qrcode-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Checkboxes */
+.qrcode-checkboxes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Botão Gerar QrCode */
+.generate-button {
+  align-self: stretch; /* O botão se ajusta à largura da caixa */
+  margin-top: auto; /* Move o botão para a parte inferior da caixa */
+  background-color: #5DA649; /* Fundo verde */
+  color: #FFF; /* Texto branco */
+  padding: 10px 20px; /* Ajusta o tamanho do botão */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-button:hover {
+  background-color: #A3BF3B; /* Cor mais clara ao passar o mouse */
+}
+
+.qrcode-output {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qrcode-output h2 {
+  font-size: 18px;
+  color: #5DA649; /* Verde */
+  margin-bottom: 15px;
+}
+
+.back-button {
+  position: absolute; /* Fixa o botão no lugar */
+  top: 20px; /* Distância do topo */
+  left: 20px; /* Distância da lateral esquerda */
+  background-color: #5DA649; /* Fundo verde */
+  color: #FFF; /* Texto branco */
+  padding: 10px 15px; /* Tamanho do botão */
+  font-size: 14px; /* Tamanho da fonte */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer;
+  text-decoration: none; /* Remove sublinhado se for um link */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #A3BF3B; /* Verde mais claro ao passar o mouse */
+}

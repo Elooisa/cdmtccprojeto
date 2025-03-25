@@ -1,23 +1,35 @@
 // src/pages/Register/Register.jsx
 import React from 'react';
-import './Register.css'; // Importação do CSS
-import Header from '../../shared/Header'; // Importação do Header compartilhado
+import './Register.css'; // Importação do CSS da página
+import Header from '../../shared/Header'; // Reutilizando o Header compartilhado
 
 const Register = () => (
   <div className="register-page">
-    <Header /> {/* Header fixo no topo */}
+    <header className="header header-register">
+      <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo" />
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Voltar</a> {/* Botão "Voltar" */}
+          </li>
+          <li>
+            <a href="/login">Entrar</a> {/* Botão "Entrar" */}
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main className="register-content">
-      <img src="src/img/logofieb.png" alt="Logo FIEB" className="register-logo" /> {/* Logo acima */}
-      <div className="register-box"> {/* Quadrado branco envolvendo o formulário */}
+      <img src="src/img/logofieb.png" alt="Logo FIEB" className="register-logo" />
+      <div className="register-box">
         <form className="register-form">
-          <input type="text" placeholder="Nome completo..." className="register-input" /> {/* Campo de nome */}
-          <input type="email" placeholder="Email..." className="register-input" /> {/* Campo de email */}
-          <input type="password" placeholder="Senha..." className="register-input" /> {/* Campo de senha */}
-          <input type="password" placeholder="Confirme a senha..." className="register-input" /> {/* Campo de confirmação */}
-          <button type="submit" className="register-button">Criar Conta</button> {/* Botão de criar conta */}
+          <input type="text" placeholder="Nome completo..." className="register-input" required />
+          <input type="email" placeholder="Email..." className="register-input"required />
+          <input type="password" placeholder="Senha..." className="register-input" required />
+          <input type="password" placeholder="Confirme a senha..." className="register-input" required />
+          <button type="submit" className="register-button">Criar Conta</button>
         </form>
         <div className="register-links">
-          <a href="/login">Já tem uma conta? Entre</a> {/* Link para login */}
+          <a href="/login">Já tem uma conta? Entre</a>
         </div>
       </div>
     </main>

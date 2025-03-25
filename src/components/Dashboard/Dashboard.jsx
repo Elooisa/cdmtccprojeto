@@ -1,36 +1,36 @@
 // src/pages/Dashboard/Dashboard.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../shared/styles/Header.css';
-import './Dashboard.css';
-import Header from '../../shared/Header';
+import './Dashboard.css'; // Importa o CSS do dashboard
 
+const Dashboard = () => {
+  return (
+    <div className="dashboard-page">
+      <header className="header ">
+      <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo" />
+            <nav>
+            <ul>
+            <li><a href="/cardapio">Cardápio</a></li>
 
-const Dashboard = () => (
-  <div className="dashboard">
-    <Header />
-    <main className="main-content">
-      <h1>Página Inicial</h1>
-      <div className="grid-container">
-        <Link to="/cardapio">
-          <div className="grid-item">Cardápio</div>
-        </Link>
-        <Link to="/feedback">
-          <div className="grid-item">Feedback</div>
-        </Link>
-        <Link to="/qrcode">
-          <div className="grid-item">QrCode</div>
-        </Link>
-        <Link to="/usuarios">
-          <div className="grid-item">Usuários</div>
-        </Link>
-        <Link to="/">
-          <div className="grid-item">Sair</div>
-        </Link>
-      </div>
-    </main>
-    <Header />
-  </div>
-);
+            <li><a href="/feedback">Feedback</a></li>
+           
+            <li><a href="/qrcode">QrCode</a></li>
+            
+            <li><a href="/usuarios">Usuários</a></li>
+            
+            <li className="logout"><a href="/">Sair</a></li>
+            </ul>
+            </nav>
+          
+      </header>
+  
+
+      {/* Conteúdo Principal do Dashboard */}
+      <main className="dashboard-content">
+        <h1>Bem-vindo ao Dashboard!</h1>
+        <p>Selecione uma das opções acima para começar.</p>
+      </main>
+    </div>
+  );
+};
 
 export default Dashboard;

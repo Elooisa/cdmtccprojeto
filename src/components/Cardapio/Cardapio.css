@@ -1,54 +1,113 @@
 /* src/pages/Cardapio/Cardapio.css */
-body {
-    background-image: url('/src/img/fundo2.png');
-    background-size: cover;
-    background-color: #A64182;
-    font-family: Arial, sans-serif;
-  }
-  
-  .main-content {
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 80%;
-  }
-  
-  button {
-    background-color: #5DA649;
-    color: #FFF;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: #A3BF3B;
-  }
-  
-  .menu-item {
-    background-color: #A64182;
-    color: #FFF;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .menu-item h3 {
-    margin: 0;
-  }
-  
-  .menu-item p {
-    margin: 5px 0;
-  }
-  
-  .back-button {
-    margin-top: 20px;
-  }
-  
+.cardapio-page {
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Botão de voltar */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #5DA649;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #A3BF3B;
+}
+
+/* Conteúdo principal */
+.cardapio-content {
+  background-color: #FFF;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário: Ajustar os campos para o mesmo tamanho */
+.add-food-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.add-food-section input {
+  flex: 1; /* Faz todos os campos terem o mesmo tamanho */
+  min-width: 200px; /* Define um tamanho mínimo */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-food-button {
+  padding: 10px;
+  background-color: #5DA649;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0; /* Evita que o botão seja redimensionado */
+}
+
+.add-food-button:hover {
+  background-color: #A3BF3B;
+}
+
+/* Calendário */
+.calendar-section {
+  margin-top: 20px;
+}
+
+.calendar-section .date-picker {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Cardápio Atual */
+.dynamic-cardapio {
+  background-color: #5DA649; /* Fundo verde para destacar o cardápio atual */
+  color: #FFF;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.dynamic-cardapio h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Cardápio de Outro Dia */
+.calendar-list {
+  list-style: none;
+  padding: 0;
+}
+
+.calendar-list li {
+  background-color: #A64182; /* Fundo roxo para diferenciar */
+  color: #FFF;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos alimentos */
+.cardapio-list li {
+  background-color: #F5F5F5;
+  color: #333;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

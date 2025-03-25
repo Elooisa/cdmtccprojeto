@@ -77,3 +77,34 @@
 .register-links a:hover {
   text-decoration: underline;
 }
+
+/* Estilo exclusivo do Header na página de cadastro */
+.header-register nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-register nav li {
+  margin-left: 20px;
+}
+
+.header-register nav a {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px 15px; /* Espaçamento interno */
+  background-color: #5DA649; /* Cor de fundo verde */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.header-register nav a:hover {
+  background-color: #A3BF3B; /* Cor ao passar o mouse */
+}
+
+/* Oculta o botão "Criar Conta" no Header da página de cadastro */
+.header-register nav ul li:nth-child(3) {
+  display: none; /* Oculta o terceiro botão, se ele estiver presente */
+}
