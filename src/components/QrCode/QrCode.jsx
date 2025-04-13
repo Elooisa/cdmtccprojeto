@@ -43,7 +43,7 @@ const QrCodeComponent = () => {
 
       {/* Cabeçalho */}
       <header className="qrcode-header">
-        <img src="src/img/logofieb.png" alt="FIEB CDM" className="qrcode-logo" />
+       
         <h1>Gerador de QrCode</h1>
       </header>
 

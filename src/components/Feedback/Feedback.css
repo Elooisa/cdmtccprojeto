@@ -1,57 +1,64 @@
-/* src/pages/Feedback/Feedback.css */
 .feedback-page {
-  color: #FFF;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-  padding: 20px;
-}
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .feedback-header h1 {
+    text-align: center;
+  }
+  
+  .feedback-section {
+    background-color: #FFF;
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-item {
+    margin-bottom: 10px;
+  }
+  
+  .feedback-buttons button,
+  .button-move {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-relevant {
+    background-color: #5DA649;
+    color: #FFF;
+  }
+  
+  .button-not-relevant {
+    background-color: #A64182;
+    color: #FFF;
+  }
+  
+  .button-evaluate {
+    background-color: #FFD700;
+    color: #FFF;
+  }
+  
+  .button-move {
+    background-color: #007BFF;
+    color: #FFF;
+  }
 
-.feedback-header h1 {
-  text-align: center;
-}
-
-.feedback-section {
-  background-color: #FFF;
-  color: #000;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.feedback-item {
-  margin-bottom: 10px;
-}
-
-.feedback-buttons {
-  display: flex;
-  gap: 15px; /* Define o espaçamento entre os botões */
-  margin-top: 10px; /* Espaçamento superior */
-}
-
-.feedback-buttons button,
-.button-move {
-  padding: 5px 10px; /* Tamanho do botão */
-  border: none;
-  border-radius: 5px; /* Cantos arredondados */
-  cursor: pointer;
-}
-
-.button-relevant {
-  background-color: #5DA649;
-  color: #FFF;
-}
-
-.button-not-relevant {
-  background-color: #A64182;
-  color: #FFF;
-}
-
-.button-evaluate {
-  background-color: #FFD700;
-  color: #FFF;
-}
-
-.button-move {
-  background-color: #007BFF;
-  color: #FFF;
-}
+  .back-button {
+    background-color: #5DA649; /* Verde */
+    color: #FFF; /* Texto branco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Espaçamento abaixo do botão */
+    transition: background-color 0.3s ease;
+  }
+  

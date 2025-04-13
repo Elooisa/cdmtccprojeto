@@ -1,6 +1,5 @@
 /* src/pages/Login/Login.css */
 .login-page {
-  background-color: #A64182; /* Cor de fundo roxa */
   background-image: url('../../img/fundo2.png'); /* Padrão de fundo */
   background-size: 100%; /* Tamanho do padrão de fundo */
   background-position: center;

@@ -15,7 +15,7 @@ const Login = () => {
   return (
     <div className="login-page">
       <header className="header">
-        <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo" />
+      <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="login-logo" />
         <nav>
           <ul>
             <li>

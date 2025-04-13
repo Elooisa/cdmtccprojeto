@@ -1,71 +1,62 @@
 /* Página do Dashboard */
 .dashboard-page {
-  min-height: 100vh; /* Garante que a página ocupe a altura total */
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.dashboard-menu {
-  list-style: none; /* Remove os marcadores da lista */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Alinha os itens horizontalmente */
-  gap: 20px; /* Adiciona espaço entre os botões */
+.logo-dashboard {
+  width: 200px; 
+  height: auto;
+  margin-bottom: 20px;
 }
 
-.dashboard-nav {
-  display: flex;
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  align-items: center; /* Alinha os botões verticalmente */
-}
-
-.dashboard-menu li a {
-  text-decoration: none; /* Remove o sublinhado */
-  color: #FFF; /* Cor do texto */
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 15px; /* Espaçamento interno */
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease;
-  background-color: #5DA649; /* Cor de fundo do botão */
-}
-
-.dashboard-menu li a:hover {
-  background-color: #A3BF3B; /* Cor ao passar o mouse */
-}
-
-
-/* Botão Sair */
-.logout a {
-  background-color: #A64182; /* Fundo vermelho */
-}
-
-.logout a:hover {
-  background-color: #732457; /* Vermelho mais escuro no hover */
-}
-
-
-.header nav ul {
+nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
 
-.header nav li {
-  margin-left: 20px;
-}
+nav ul li a {
 
-.header nav a {
-  text-decoration: none;
   color: #FFF;
-  font-weight: bold;
-  padding: 10px 15px; /* Espaçamento interno dos botões */
-  background-color: #5DA649; /* Cor de fundo verde */
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease; /* Transição suave */
+  text-decoration: none;
 }
 
-.header nav a:hover {
-  background-color: #A3BF3B; /* Cor ao passar o mouse */
+.logout a {
+  color: #FF6347;
+}
+
+.dashboard-content {
+  text-align: center;
+}
+
+.slide-item {
+  width: 60%; /* Garante que a imagem ocupe toda a largura do slide */
+  height: auto; /* Mantém a proporção da imagem */
+  opacity: 0.7; /* Define a opacidade em 50% */
+  transition: opacity 0.3s ease; /* Animação para suavizar mudanças */
+}
+
+.swiper {
+  margin-top: 50px; /* Cria o espaço acima do slider */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(255, 255, 255, 0.5); /* Define uma cor semitransparente */
+  font-size: 18px; /* Reduz o tamanho das setinhas */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #fff; /* Torna a cor totalmente branca ao passar o mouse */
 }

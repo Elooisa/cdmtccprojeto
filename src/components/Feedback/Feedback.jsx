@@ -1,6 +1,5 @@
-// src/pages/Feedback/Feedback.jsx
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Feedback.css'; // Estilos da página
 
 const Feedback = () => {
@@ -8,12 +7,14 @@ const Feedback = () => {
   const [newFeedback, setNewFeedback] = useState([
     { id: 1, text: 'Poderiam dar mais vezes pão com requeijão ' },
     { id: 2, text: 'Tentem evitar colocar peixe no cardápio ' },
-    { id: 3, text: 'Muito boa a farofa de linguiça ' },
-    { id: 4, text: 'Deem mais frutas' },
+    { id: 3, text: 'Poderiam dar mais frutas ' },
+    { id: 4, text: 'Comida muito boa' },
   ]);
   const [relevantFeedback, setRelevantFeedback] = useState([]);
   const [notRelevantFeedback, setNotRelevantFeedback] = useState([]);
   const [toEvaluateFeedback, setToEvaluateFeedback] = useState([]);
+
+  const navigate = useNavigate();
 
   // Função para mover um comentário de "Novos Feedback" para outra categoria
   const moveFeedback = (id, fromList, toList, setFromList, setToList) => {
@@ -24,13 +25,15 @@ const Feedback = () => {
 
   return (
     <div className="feedback-page">
-      {/* Botão de voltar */}
-            <Link to="/dashboard" className="back-link">
-              Voltar 
-            </Link>
+         {/* Botão "Voltar" */}
+      <button className="back-button" onClick={() => navigate('/dashboard')}>
+        Voltar 
+      </button>
+
       <header className="feedback-header">
         <h1>Feedback</h1>
       </header>
+      
       <main className="feedback-content">
         {/* Novos Feedback */}
         <section className="feedback-section">
@@ -49,13 +52,13 @@ const Feedback = () => {
                   className="button-not-relevant"
                   onClick={() => moveFeedback(item.id, newFeedback, notRelevantFeedback, setNewFeedback, setNotRelevantFeedback)}
                 >
-                  Não Relevante
+                  N-Relevante
                 </button>
                 <button
                   className="button-evaluate"
                   onClick={() => moveFeedback(item.id, newFeedback, toEvaluateFeedback, setNewFeedback, setToEvaluateFeedback)}
                 >
-                  Avaliar
+                 Avaliar
                 </button>
               </div>
             </div>

@@ -40,7 +40,7 @@ const Cardapio = () => {
       <Link to="/dashboard" className="back-link">
         Voltar 
       </Link>
-
+      
       {/* Cabeçalho */}
       <main className="cardapio-content">
         <h1>Cardápio</h1>
