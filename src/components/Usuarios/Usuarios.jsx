@@ -1,6 +1,5 @@
-// src/pages/Usuarios/Usuarios.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Para navegação
+import { useNavigate } from 'react-router-dom'; 
 import './Usuarios.css';
 
 const Usuarios = () => {
@@ -10,14 +9,11 @@ const Usuarios = () => {
     { id: 3, name: 'Clara Oliveira', email: 'clara.oliveira@email.com', password: '5678', isAdmin: true },
   ]);
 
-  const [editingUser, setEditingUser] = useState(null); // Armazena o usuário sendo editado
-  const navigate = useNavigate(); // Hook para navegação
-
-  // Funções de edição, exclusão e administração já existentes...
+  const [editingUser, setEditingUser] = useState(null); 
+  const navigate = useNavigate(); 
 
   return (
     <div className="usuarios-page">
-      {/* Botão "Voltar" */}
       <button className="back-button" onClick={() => navigate('/dashboard')}>
         Voltar 
       </button>
@@ -98,7 +94,7 @@ const Usuarios = () => {
                               u.id === editingUser.id ? editingUser : u
                             )
                           );
-                          setEditingUser(null); // Salvar e sair do modo de edição
+                          setEditingUser(null); 
                         }}
                       >
                         Salvar

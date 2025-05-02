@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Header from '../../shared/Header'; // Importa o Header compartilhado
+import Header from '../../shared/Header'; 
 
 const Home = () => (
   <div className="home">

@@ -1,11 +1,10 @@
-// src/pages/Dashboard/Dashboard.jsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; // Importa o autoplay
+import { Autoplay } from 'swiper/modules'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './Dashboard.css'; // Estilos personalizados
+import './Dashboard.css'; 
 
 const data = [
   { id: 1, image: 'src/img/dashboard2.png' },
@@ -33,16 +32,16 @@ const Dashboard = () => {
         </nav>
       </header>
 
-      {/* Conteúdo Principal do Dashboard */}
+      
       <main className="dashboard-content">
        
-        {/* Slider de imagens */}
+        
         <Swiper
           slidesPerView={1}
           navigation={true}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // Ativa autoplay
-          modules={[Autoplay]} // Importa módulo de autoplay
+          autoplay={{ delay: 3000, disableOnInteraction: false }} 
+          modules={[Autoplay]} 
         >
           {data.map((item) => (
             <SwiperSlide key={item.id}>

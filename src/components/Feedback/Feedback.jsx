@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Feedback.css'; // Estilos da página
+import './Feedback.css'; 
 
 const Feedback = () => {
-  // Estados para cada lista de comentários
+  
   const [newFeedback, setNewFeedback] = useState([
     { id: 1, text: 'Poderiam dar mais vezes pão com requeijão ' },
     { id: 2, text: 'Tentem evitar colocar peixe no cardápio ' },
@@ -16,16 +16,16 @@ const Feedback = () => {
 
   const navigate = useNavigate();
 
-  // Função para mover um comentário de "Novos Feedback" para outra categoria
+ 
   const moveFeedback = (id, fromList, toList, setFromList, setToList) => {
-    const feedbackItem = fromList.find((item) => item.id === id); // Encontra o comentário
-    setFromList(fromList.filter((item) => item.id !== id)); // Remove da lista de origem
-    setToList([...toList, feedbackItem]); // Adiciona na lista de destino
+    const feedbackItem = fromList.find((item) => item.id === id); 
+    setFromList(fromList.filter((item) => item.id !== id)); 
+    setToList([...toList, feedbackItem]); 
   };
 
   return (
     <div className="feedback-page">
-         {/* Botão "Voltar" */}
+        
       <button className="back-button" onClick={() => navigate('/dashboard')}>
         Voltar 
       </button>
@@ -35,7 +35,7 @@ const Feedback = () => {
       </header>
       
       <main className="feedback-content">
-        {/* Novos Feedback */}
+       
         <section className="feedback-section">
           <h2>Novos Feedback:</h2>
           {newFeedback.map((item) => (
@@ -65,7 +65,7 @@ const Feedback = () => {
           ))}
         </section>
 
-        {/* Relevantes */}
+       
         <section className="feedback-section">
           <h2>Relevantes:</h2>
           {relevantFeedback.map((item) => (
@@ -81,7 +81,7 @@ const Feedback = () => {
           ))}
         </section>
 
-        {/* Não Relevantes */}
+       
         <section className="feedback-section">
           <h2>Não Relevantes:</h2>
           {notRelevantFeedback.map((item) => (
@@ -97,7 +97,7 @@ const Feedback = () => {
           ))}
         </section>
 
-        {/* A Avaliar */}
+        
         <section className="feedback-section">
           <h2>A Avaliar:</h2>
           {toEvaluateFeedback.map((item) => (

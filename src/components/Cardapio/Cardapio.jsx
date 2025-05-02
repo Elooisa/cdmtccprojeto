@@ -1,14 +1,13 @@
-// src/pages/Cardapio/Cardapio.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Cardapio.css';
 
 const Cardapio = () => {
-  const [foods, setFoods] = useState([]); // Estado para armazenar alimentos
-  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().substring(0, 10)); // Estado para armazenar a data selecionada
-  const [calendarData, setCalendarData] = useState({}); // Estado para armazenar cardápios por dia
+  const [foods, setFoods] = useState([]); 
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().substring(0, 10)); 
+  const [calendarData, setCalendarData] = useState({}); 
 
-  // Função para adicionar alimentos
+  
   const handleAddFood = (e) => {
     e.preventDefault();
     const foodName = e.target.elements.foodName.value.trim();
@@ -19,33 +18,30 @@ const Cardapio = () => {
       const newFood = { name: foodName, calories, proteins };
       setFoods([...foods, newFood]);
 
-      // Adiciona o alimento ao calendário
+      
       setCalendarData({
         ...calendarData,
         [selectedDate]: [...(calendarData[selectedDate] || []), newFood],
       });
 
-      e.target.reset(); // Limpa o formulário
+      e.target.reset();
     }
   };
 
-  // Função para mudar a data
+  
   const handleDateChange = (e) => {
-    setSelectedDate(e.target.value); // Atualiza a data selecionada
+    setSelectedDate(e.target.value); 
   };
 
   return (
     <div className="cardapio-page">
-      {/* Botão de voltar */}
       <Link to="/dashboard" className="back-link">
         Voltar 
       </Link>
       
-      {/* Cabeçalho */}
       <main className="cardapio-content">
         <h1>Cardápio</h1>
         
-        {/* Formulário para adicionar alimentos */}
         <section className="add-food-section">
           <h2>Adicionar Alimento</h2>
           <form onSubmit={handleAddFood}>
@@ -56,7 +52,6 @@ const Cardapio = () => {
           </form>
         </section>
         
-        {/* Calendário para selecionar datas */}
         <section className="calendar-section">
           <h2>Selecionar Data</h2>
           <input
@@ -75,7 +70,6 @@ const Cardapio = () => {
           </ul>
         </section>
 
-        {/* Cardápio dinâmico */}
         <section className="dynamic-cardapio">
           <h2>Cardápio Atual</h2>
           <ul className="cardapio-list">

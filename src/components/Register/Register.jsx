@@ -1,7 +1,6 @@
-// src/pages/Register/Register.jsx
 import React from 'react';
-import './Register.css'; // Importação do CSS da página
-import Header from '../../shared/Header'; // Reutilizando o Header compartilhado
+import './Register.css'; 
+import Header from '../../shared/Header'; 
 
 const Register = () => (
   <div className="register-page">
@@ -10,10 +9,10 @@ const Register = () => (
       <nav>
         <ul>
           <li>
-            <a href="/">Voltar</a> {/* Botão "Voltar" */}
+            <a href="/">Voltar</a>
           </li>
           <li>
-            <a href="/login">Entrar</a> {/* Botão "Entrar" */}
+            <a href="/login">Entrar</a>
           </li>
         </ul>
       </nav>

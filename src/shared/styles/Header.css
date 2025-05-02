@@ -1,22 +1,21 @@
-/* src/shared/styles/Header.css */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5DA649; /* Verde */
+  background-color: #5DA649; 
   padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;
-  height: 60px; /* Altura fixa */
-  position: fixed; /* Fixa o header no topo */
-  top: 0; /* Garante que ele está no topo */
-  left: 0; /* Alinha à esquerda */
-  width: 100%; /* Faz o header ocupar toda a largura */
+  height: 60px; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
   z-index: 1000;
 }
 
 .logo-header {
-  width: 200px; /* Defina a largura desejada */
+  width: 200px; 
   height: auto;
 }
 

@@ -1,4 +1,3 @@
-// src/pages/ForgotPassword/ForgotPassword.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../shared/styles/Header.css';
@@ -11,7 +10,7 @@ const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const handleResetPassword = () => {
-    // Lógica de recuperação de senha de exemplo
+    
     alert(`Link de recuperação de senha enviado para ${email}`);
     navigate('/login');
   };

@@ -1,14 +1,14 @@
 .home {
-  background-image: url('../../img/fundo2.png'); /* Padrão de fundo */
-  background-size: cover; /* Expande o fundo para cobrir a tela */
-  background-position: center; /* Centraliza a imagem de fundo */
+  background-image: url('../../img/fundo2.png');
+  background-size: cover; 
+  background-position: center; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Altura total da tela */
-  width: 100%; /* Largura total */
-  overflow: hidden; /* Impede que algo exceda a tela */
+  height: 100vh; 
+  width: 100%; 
+  overflow: hidden; 
 }
 
 .logo-home{

@@ -1,15 +1,13 @@
-// src/pages/Login/Login.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa a navegação
-import './Login.css'; // Importa o CSS
+import { useNavigate } from 'react-router-dom'; 
+import './Login.css'; 
 
 const Login = () => {
-  const navigate = useNavigate(); // Hook para redirecionamento de rotas
+  const navigate = useNavigate(); 
 
   const handleLogin = (event) => {
-    event.preventDefault(); // Evita o recarregamento da página
-    // Lógica de autenticação pode ser adicionada aqui no futuro
-    navigate('/dashboard'); // Redireciona para o Dashboard
+    event.preventDefault(); 
+    navigate('/dashboard'); 
   };
 
   return (
