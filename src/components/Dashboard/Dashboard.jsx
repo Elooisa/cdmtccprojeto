@@ -8,7 +8,7 @@ import './Dashboard.css';
 
 const data = [
   { id: 1, image: 'src/img/dashboard2.png' },
-  { id: 2, image: 'src/img/dashboard3.png' },
+  { id: 2, image: 'src/img/dashboard4.png' },
   { id: 3, image: 'src/img/dashboard4.png' },
 ];
 
@@ -20,8 +20,6 @@ const Dashboard = () => {
         <nav>
           <ul>
             <li><a href="/cardapio">Cardápio</a></li>
-            
-            <li><a href="/feedback">Feedback</a></li>
            
             <li><a href="/qrcode">QrCode</a></li>
            
