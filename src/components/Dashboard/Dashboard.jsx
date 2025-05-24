@@ -16,7 +16,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-page">
       <header className="header">
-        <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo-dashboard" />
+        <img src="src/img/logofiebnew.png" alt="FIEB CDM" className="logo-dashboard" />
         <nav>
           <ul>
             <li><a href="/cardapio">Cardápio</a></li>

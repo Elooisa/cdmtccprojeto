@@ -4,7 +4,7 @@ import './styles/Header.css';
 
 const Header = () => (
   <header className="header">
-    <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo-header" />
+    <img src="src/img/logofiebnew.png" alt="FIEB CDM" className="logo-header" />
     <nav>
       <ul>
         <li>

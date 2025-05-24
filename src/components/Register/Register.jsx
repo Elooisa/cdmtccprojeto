@@ -5,7 +5,7 @@ import Header from '../../shared/Header';
 const Register = () => (
   <div className="register-page">
     <header className="header header-register">
-      <img src="src/img/logofiebnova.png" alt="FIEB CDM" className="logo" />
+      <img src="src/img/logofiebnew.png" alt="FIEB CDM" className="logo" />
       <nav>
         <ul>
           <li>
